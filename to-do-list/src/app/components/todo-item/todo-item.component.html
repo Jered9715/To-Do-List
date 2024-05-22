@@ -1,1 +1,5 @@
-<p>todo-item works!</p>
+<div class="todo-item" [ngClass]="{'completedToDo': todo.completed}">
+   <p><button (click)="markComplete.emit(todo)"class="complete">Complete </button>
+    {{todo.task}} (Hr {{todo.duration}}) {{todo.priority}} <button (click)="removeTodo.emit(todo)" class="remove">X</button>
+</p> 
+</div>

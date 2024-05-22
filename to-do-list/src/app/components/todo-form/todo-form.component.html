@@ -1,1 +1,22 @@
-<p>todo-form works!</p>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit(todoForm)" #todoForm="ngForm">
+        <div>
+            <label for="task">Task:</label>
+            <input id="task" type="text" [(ngModel)]="task" name="task" required class="form-control">
+        </div>
+
+        <div>
+            <label for="duration">Duration(Hr):</label>
+            <input id="duration" type="number"[(ngModel)]="duration" name="duration" required class="form-control">
+        </div>
+    
+        <div>
+            <label>Priority:</label>
+            <label><input type="radio" [(ngModel)]="priority" value="NORMAL" name="priority"> Normal</label>
+            <label><input type="radio" [(ngModel)]="priority" value="HIGH" name="priority"> High</label>
+            <label><input type="radio" [(ngModel)]="priority" value="LOW" name="priority"> Low</label>
+        </div>
+
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>
